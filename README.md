@@ -1,3 +1,9 @@
+# Game Lab 4: 2D Platformer Game
+By 673380312-5 นายชวกร สมทรัพย์
+
+- **Game Story** — A young traveler becomes lost in the forests of Northeastern Thailand (Isan). To survive, the player must overcome dangerous creatures, avoid deadly traps, collect food and useful items, and find a safe way back to the village while uncovering the mystery hidden in the forest.
+
+- **Game Style** — A 2D pixel-art survival platformer inspired by traditional Isan culture, featuring retro graphics, atmospheric music, exploration, item collection, and action-packed gameplay.
 # 2D Platformer Starter Kit
 
 This starter kit provides all the essential mechanics needed to build a complete 2D platformer game in Godot 4.7. It is designed as a hands-on learning resource for students taking the **Computer Game Development** course at the **College of Computing, Khon Kaen University**.
