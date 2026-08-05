@@ -1,67 +1,53 @@
 [gd_scene format=3 uid="uid://b48s52q3f64kl"]
 
 [ext_resource type="PackedScene" uid="uid://d27bcsmx82vfa" path="res://Scenes/Actors/enemy.tscn" id="1_a4af2"]
-[ext_resource type="Texture2D" uid="uid://bgo8qsi7vlfr1" path="res://Assets/Spritesheet/Mushroom-Run.png" id="2_2oid6"]
 [ext_resource type="Script" uid="uid://bx5lotsye1r4s" path="res://Scenes/Actors/monster_small.gd" id="2_tyn28"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_na032"]
-atlas = ExtResource("2_2oid6")
-region = Rect2(0, 22, 80, 42)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cy5wp"]
-atlas = ExtResource("2_2oid6")
-region = Rect2(80, 22, 80, 42)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_aldu0"]
-atlas = ExtResource("2_2oid6")
-region = Rect2(160, 22, 80, 42)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5jiam"]
-atlas = ExtResource("2_2oid6")
-region = Rect2(240, 22, 80, 42)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_se70e"]
-atlas = ExtResource("2_2oid6")
-region = Rect2(320, 22, 80, 42)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fblqy"]
-atlas = ExtResource("2_2oid6")
-region = Rect2(400, 22, 80, 42)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k3ucb"]
-atlas = ExtResource("2_2oid6")
-region = Rect2(480, 22, 80, 42)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x2ha1"]
-atlas = ExtResource("2_2oid6")
-region = Rect2(560, 22, 80, 42)
+[ext_resource type="Texture2D" uid="uid://dprjrqw3i4boi" path="res://Fallen_Angels_2/freedinosprite/png/Walk (1).png" id="3_b6urm"]
+[ext_resource type="Texture2D" uid="uid://dbrpi8t51ynm8" path="res://Fallen_Angels_2/freedinosprite/png/Walk (2).png" id="4_kmraa"]
+[ext_resource type="Texture2D" uid="uid://dema1iof3dr8u" path="res://Fallen_Angels_2/freedinosprite/png/Walk (3).png" id="5_kh5m6"]
+[ext_resource type="Texture2D" uid="uid://c4t66n2ig47e8" path="res://Fallen_Angels_2/freedinosprite/png/Walk (4).png" id="6_cnuaw"]
+[ext_resource type="Texture2D" uid="uid://2mhs7oqg0qxr" path="res://Fallen_Angels_2/freedinosprite/png/Walk (5).png" id="7_ub1y4"]
+[ext_resource type="Texture2D" uid="uid://dd31o0fb5pw2b" path="res://Fallen_Angels_2/freedinosprite/png/Walk (6).png" id="8_b0x8u"]
+[ext_resource type="Texture2D" uid="uid://ds4vem15dxsfu" path="res://Fallen_Angels_2/freedinosprite/png/Walk (10).png" id="8_ub1y4"]
+[ext_resource type="Texture2D" uid="uid://dqlsj3mr4iewt" path="res://Fallen_Angels_2/freedinosprite/png/Walk (7).png" id="10_b0x8u"]
+[ext_resource type="Texture2D" uid="uid://bgb2p34vq6717" path="res://Fallen_Angels_2/freedinosprite/png/Walk (8).png" id="11_8g5y5"]
+[ext_resource type="Texture2D" uid="uid://b8jer25pmfem5" path="res://Fallen_Angels_2/freedinosprite/png/Walk (9).png" id="12_qs8ce"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l7ctk"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_na032")
+"texture": ExtResource("3_b6urm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cy5wp")
+"texture": ExtResource("4_kmraa")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_aldu0")
+"texture": ExtResource("5_kh5m6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5jiam")
+"texture": ExtResource("6_cnuaw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_se70e")
+"texture": ExtResource("7_ub1y4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fblqy")
+"texture": ExtResource("8_ub1y4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_k3ucb")
+"texture": ExtResource("8_b0x8u")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_x2ha1")
+"texture": ExtResource("8_b0x8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_b0x8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8g5y5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_qs8ce")
 }],
 "loop": 1,
 "name": &"mushroom",
@@ -69,6 +55,7 @@ animations = [{
 }]
 
 [node name="Enemy" unique_id=600502477 instance=ExtResource("1_a4af2")]
+position = Vector2(0, 1)
 script = ExtResource("2_tyn28")
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=587424215]
@@ -80,7 +67,8 @@ position = Vector2(0, -33)
 scale = Vector2(1.5, 1.5)
 
 [node name="AnimateSprite" type="AnimatedSprite2D" parent="Sprite" parent_id_path=PackedInt32Array(1445111960) index="0" unique_id=87960724]
-position = Vector2(0, -42)
-scale = Vector2(2, 2)
+position = Vector2(-16, -33)
+scale = Vector2(0.125, 0.17161018)
 sprite_frames = SubResource("SpriteFrames_l7ctk")
 animation = &"mushroom"
+flip_h = true

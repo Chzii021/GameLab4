@@ -1,7 +1,8 @@
 [gd_scene format=4 uid="uid://dekkdb3a0eifd"]
 
 [ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1_l0dwn"]
-[ext_resource type="PackedScene" uid="uid://cppg5yoxwv0dy" path="res://Scenes/Levels/level_02.tscn" id="2_wf6s8"]
+[ext_resource type="Texture2D" uid="uid://dv0xm8k7n7cbj" path="res://ป่า/background 3/background 3.png" id="2_j0t0u"]
+[ext_resource type="PackedScene" uid="uid://darrnnrsriosd" path="res://Scenes/Levels/level_02.tscn" id="2_wf6s8"]
 [ext_resource type="PackedScene" uid="uid://cb8e62red7kc0" path="res://Scenes/Prefabs/trap_1.tscn" id="3_bmcj7"]
 [ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://Scenes/Prefabs/coin.tscn" id="3_dbq10"]
 [ext_resource type="TileSet" uid="uid://bvk6vx5i1riqd" path="res://Scenes/Prefabs/ground_tile_set.tres" id="3_qelns"]
@@ -10,10 +11,16 @@
 [ext_resource type="PackedScene" uid="uid://dabag2r57aued" path="res://Scenes/Prefabs/heal_potion.tscn" id="6_mb1if"]
 [ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://Scenes/Prefabs/theme.tres" id="6_taws2"]
 [ext_resource type="PackedScene" uid="uid://b48s52q3f64kl" path="res://Scenes/Actors/monster_mushroom.tscn" id="7_mb1if"]
+[ext_resource type="AudioStream" uid="uid://rwgeggxpokjv" path="res://Jurassic Park theme song.mp3" id="12_g38v2"]
 
 [node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_l0dwn")]
 
-[node name="LevelFinishDoor" parent="." index="0" unique_id=1788542095]
+[node name="Screenshot20260805134420" type="Sprite2D" parent="." index="0" unique_id=1435619566]
+position = Vector2(542.00006, 320)
+scale = Vector2(3.6052666, 3.4640834)
+texture = ExtResource("2_j0t0u")
+
+[node name="LevelFinishDoor" parent="." index="1" unique_id=1788542095]
 position = Vector2(1329, 400)
 next_scene = ExtResource("2_wf6s8")
 
@@ -111,3 +118,6 @@ offset_right = 585.0
 offset_bottom = 575.0
 theme = ExtResource("6_taws2")
 text = "กระโดดข้ามเครื่องบด"
+
+[node name="MusicPlayer" parent="." index="8" unique_id=724032201]
+stream = ExtResource("12_g38v2")

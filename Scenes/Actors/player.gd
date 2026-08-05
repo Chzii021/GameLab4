@@ -11,12 +11,12 @@ signal hit_trap
 @export var move_speed : float = 300
 @export var jump_force : float = 650
 @export var gravity : float = 30
-@export var max_jump_count : int = 2
+@export var max_jump_count = 2
 @export var bullet_scene : PackedScene
 @export var shoot_cooldown_time : float = 0.2
 @export var bullet_lifetime = 2.0
 
-var jump_count : int = 2
+var jump_count = 2
 
 @export_category("Toggle Functions") # Double jump feature is disable by default (Can be toggled from inspector)
 @export var double_jump : = false
@@ -81,11 +81,10 @@ func movement():
 # Handles jumping functionality (double jump or single jump, can be toggled from inspector)
 func handle_jumping():
 	if Input.is_action_just_pressed("Jump") and movement_enabled:
-		if is_on_floor() and !double_jump:
-			jump()
-		elif double_jump and jump_count > 0:
+		if jump_count > 0:
 			jump()
 			jump_count -= 1
+			
 
 # Player jump
 func jump():

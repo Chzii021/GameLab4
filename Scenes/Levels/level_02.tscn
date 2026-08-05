@@ -1,25 +1,124 @@
-[gd_scene format=3 uid="uid://cppg5yoxwv0dy"]
+[gd_scene format=4 uid="uid://darrnnrsriosd"]
 
 [ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1_3fxa7"]
-[ext_resource type="Texture2D" uid="uid://dkc8rdq3j7ppf" path="res://Assets/BG/mountainA.png" id="2_2e1f7"]
-[ext_resource type="PackedScene" uid="uid://towe6jtciome" path="res://Scenes/Levels/level_03.tscn" id="2_q8k1b"]
+[ext_resource type="PackedScene" uid="uid://cppg5yoxwv0dy" path="res://Scenes/Levels/level_03.tscn" id="2_q8k1b"]
+[ext_resource type="Texture2D" uid="uid://fafgs3suxy8l" path="res://ป่า/background 4/background 4.png" id="3_f8isr"]
+[ext_resource type="TileSet" uid="uid://bvk6vx5i1riqd" path="res://Scenes/Prefabs/ground_tile_set.tres" id="4_x41uu"]
+[ext_resource type="PackedScene" uid="uid://ek7hxkqp2wff" path="res://Scenes/Actors/monster_slim.tscn" id="6_2uk4d"]
+[ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://Scenes/Prefabs/coin.tscn" id="7_2uk4d"]
+[ext_resource type="AudioStream" uid="uid://rwgeggxpokjv" path="res://Jurassic Park theme song.mp3" id="7_x41uu"]
 
 [node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_3fxa7")]
 
 [node name="LevelFinishDoor" parent="." index="0" unique_id=1788542095]
-position = Vector2(1118, 400)
+position = Vector2(1369, 408)
 next_scene = ExtResource("2_q8k1b")
 
-[node name="Background1" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="0" unique_id=1072429833]
-metadata/_edit_lock_ = true
+[node name="Background4" type="Sprite2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="0" unique_id=567505141]
+position = Vector2(523, 180.5)
+scale = Vector2(3.5277777, 2.898148)
+texture = ExtResource("3_f8isr")
 
-[node name="Background2" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="1" unique_id=1070008654]
-metadata/_edit_lock_ = true
+[node name="Ground" type="TileMapLayer" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="3" unique_id=1064214822]
+use_parent_material = true
+tile_map_data = PackedByteArray("AAADAAcAAAAAAAEAAAAEAAcAAAAAAAEAAAAFAAcAAAAAAAEAAAATAAcAAAAGAAAAAAAUAAcAAAAGAAAAAAAVAAcAAAAGAAAAAAAWAAcAAAAGAAAAAAAXAAcAAAAGAAAAAAD+/wUAAAADAAEAAAD+/wYAAAADAAEAAAD+/wQAAAADAAEAAAD+/wMAAAADAAEAAAD+/wIAAAADAAEAAAD+/wEAAAADAAEAAAD+/wcAAAADAAEAAAD+/wgAAAADAAEAAAD+/wkAAAADAAEAAAD//wkAAAADAAEAAAD//wgAAAADAAEAAAAGAAgAAAADAAEAAAAGAAkAAAADAAEAAAAHAAkAAAADAAEAAAAHAAgAAAADAAEAAAAGAAoAAAADAAEAAAAGAAsAAAADAAEAAAAGAAwAAAADAAEAAAAGAA0AAAADAAEAAAAHAA0AAAADAAEAAAAHAAwAAAADAAEAAAAHAAsAAAADAAEAAAAHAAoAAAADAAEAAAD+/woAAAADAAEAAAD+/wsAAAADAAEAAAD+/wwAAAADAAEAAAD+/w0AAAADAAEAAAD//w0AAAADAAEAAAD//wwAAAADAAEAAAD//wsAAAADAAEAAAD//woAAAADAAEAAAASAAgAAAADAAEAAAASAAkAAAADAAEAAAASAAoAAAADAAEAAAASAAsAAAADAAEAAAASAAwAAAADAAEAAAASAA0AAAADAAEAAAARAA0AAAADAAEAAAARAAwAAAADAAEAAAARAAsAAAADAAEAAAARAAoAAAADAAEAAAARAAkAAAADAAEAAAARAAgAAAADAAEAAAAVAAgAAAAGAAAAAAAUAAgAAAAGAAAAAAAWAAgAAAAGAAAAAAAWAAYAAAAGAAAAAAAWAAUAAAAGAAAAAAAWAAQAAAAGAAAAAAAWAAMAAAAGAAAAAAAXAAMAAAAGAAAAAAAXAAQAAAAGAAAAAAAXAAUAAAAGAAAAAAAXAAYAAAAGAAAAAAAXAAgAAAAGAAAAAAATAAkAAAAGAAAAAAAUAAkAAAAGAAAAAAATAAgAAAAGAAAAAAAVAAkAAAAGAAAAAAAWAAkAAAAGAAAAAAAXAAkAAAAGAAAAAAAXAAIAAAAGAAAAAAAWAAIAAAAGAAAAAAAWAAEAAAAGAAAAAAAXAAEAAAAGAAAAAAACAAcAAAAAAAEAAAABAAcAAAAAAAEAAAAAAAcAAAAAAAEAAAD//wcAAAAAAAEAAAD//wYAAAAAAAQAAAAAAAYAAAAAAAQAAAABAAYAAAAAAAQAAAACAAYAAAAAAAQAAAADAAYAAAAAAAQAAAAEAAYAAAAAAAQAAAAFAAYAAAAAAAQAAAAAAAgAAAADAAEAAAABAAgAAAADAAEAAAACAAgAAAADAAEAAAADAAgAAAADAAEAAAAEAAgAAAADAAEAAAAFAAgAAAADAAEAAAAFAAkAAAADAAEAAAAEAAkAAAADAAEAAAADAAkAAAADAAEAAAACAAkAAAADAAEAAAABAAkAAAADAAEAAAAAAAkAAAADAAEAAAAAAAoAAAADAAEAAAABAAoAAAADAAEAAAACAAoAAAADAAEAAAADAAoAAAADAAEAAAAEAAoAAAADAAEAAAAFAAoAAAADAAEAAAAIAAgAAAADAAEAAAAJAAgAAAADAAEAAAAKAAgAAAADAAEAAAALAAgAAAADAAEAAAAMAAgAAAADAAEAAAANAAgAAAADAAEAAAAOAAgAAAADAAEAAAAPAAgAAAADAAEAAAAQAAgAAAADAAEAAAAQAAkAAAADAAEAAAAQAAoAAAADAAEAAAAPAAoAAAADAAEAAAAOAAoAAAADAAEAAAANAAoAAAADAAEAAAAMAAoAAAADAAEAAAALAAoAAAADAAEAAAAKAAoAAAADAAEAAAAJAAoAAAADAAEAAAAIAAoAAAADAAEAAAAIAAkAAAADAAEAAAAJAAkAAAADAAEAAAAKAAkAAAADAAEAAAALAAkAAAADAAEAAAAMAAkAAAADAAEAAAANAAkAAAADAAEAAAAOAAkAAAADAAEAAAAPAAkAAAADAAEAAAAGAAcAAAAAAAEAAAAHAAcAAAAAAAEAAAAIAAcAAAAAAAEAAAAJAAcAAAAAAAEAAAAKAAcAAAAAAAEAAAALAAcAAAAAAAEAAAAMAAcAAAAAAAEAAAANAAcAAAAAAAEAAAAOAAcAAAAAAAEAAAAPAAcAAAAAAAEAAAAQAAcAAAAAAAEAAAARAAcAAAAAAAEAAAAGAAYAAAAAAAQAAAAHAAYAAAAAAAQAAAAIAAYAAAAAAAQAAAAJAAYAAAAAAAQAAAAKAAYAAAAAAAQAAAALAAYAAAAAAAQAAAAMAAYAAAAAAAQAAAANAAYAAAAAAAQAAAAOAAYAAAAAAAQAAAAPAAYAAAAAAAQAAAAQAAYAAAAAAAQAAAARAAYAAAAAAAQAAAASAAYAAAAAAAQAAAATAAYAAAAAAAQAAAA=")
+tile_set = ExtResource("4_x41uu")
 
-[node name="MountainA" type="Sprite2D" parent="Level/Background2" index="0" unique_id=1142107788]
-position = Vector2(270.25, 217.24998)
-scale = Vector2(2.1334267, 2.4474432)
-texture = ExtResource("2_2e1f7")
+[node name="Coin7" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="4" unique_id=629814736 instance=ExtResource("7_2uk4d")]
+position = Vector2(905, 364)
+rotation = 3.1415927
+
+[node name="Coin6" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="5" unique_id=583137286 instance=ExtResource("7_2uk4d")]
+position = Vector2(855, 364)
+rotation = -2.6179938
+
+[node name="Coin8" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="6" unique_id=1404586329 instance=ExtResource("7_2uk4d")]
+position = Vector2(810.00006, 360)
+rotation = -2.0943952
+
+[node name="Coin5" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="7" unique_id=677002635 instance=ExtResource("7_2uk4d")]
+position = Vector2(763, 364)
+rotation = -1.5707964
+
+[node name="Coin4" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="8" unique_id=1256934038 instance=ExtResource("7_2uk4d")]
+position = Vector2(720.00006, 364)
+rotation = -1.0471976
+
+[node name="Coin3" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="9" unique_id=1856055174 instance=ExtResource("7_2uk4d")]
+position = Vector2(684, 363.99997)
+rotation = -0.5235988
+
+[node name="Coin2" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="10" unique_id=1031892760 instance=ExtResource("7_2uk4d")]
+position = Vector2(643, 360)
+
+[node name="Coin" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="11" unique_id=251510796 instance=ExtResource("7_2uk4d")]
+position = Vector2(611, 364)
+rotation = 0.5235988
+
+[node name="Enemy5" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="12" unique_id=600502477 instance=ExtResource("6_2uk4d")]
+position = Vector2(549, 253)
+rotation = -3.403392
+scale = Vector2(2.8109994, -2.0387385)
+skew = 0.18979251
+speed = 20.0
+
+[node name="Enemy6" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="13" unique_id=33797645 instance=ExtResource("6_2uk4d")]
+position = Vector2(953.0001, 302)
+rotation = 3.1415927
+scale = Vector2(-5.3576465, -6.176153)
+skew = 0.1897924
+speed = 20.0
+
+[node name="Enemy10" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="14" unique_id=964497614 instance=ExtResource("6_2uk4d")]
+position = Vector2(684, 223.00006)
+scale = Vector2(9.695537, 7.9918456)
+skew = 0.34714556
+speed = 20.0
+
+[node name="Enemy7" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="15" unique_id=1162552070 instance=ExtResource("6_2uk4d")]
+position = Vector2(416.99997, 261)
+scale = Vector2(5.3576465, 6.176153)
+skew = 0.1897924
+speed = 20.0
+
+[node name="Enemy8" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="16" unique_id=1116058117 instance=ExtResource("6_2uk4d")]
+position = Vector2(524.00006, 186)
+scale = Vector2(7.340198, 8.398089)
+skew = 0.34714556
+speed = 20.0
+
+[node name="Enemy9" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="17" unique_id=2033030968 instance=ExtResource("6_2uk4d")]
+position = Vector2(1167, 285)
+scale = Vector2(5.3576465, 6.176153)
+skew = 0.1897924
+speed = 20.0
+
+[node name="Enemy12" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="18" unique_id=1570118443 instance=ExtResource("6_2uk4d")]
+position = Vector2(885, 63.00006)
+scale = Vector2(6.773581, 5.285241)
+skew = 0.34714556
+speed = 20.0
+
+[node name="Enemy13" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="19" unique_id=1746048865 instance=ExtResource("6_2uk4d")]
+position = Vector2(261, 217.00006)
+scale = Vector2(5.357646, 6.176153)
+skew = 0.18979228
+speed = 20.0
+
+[node name="Enemy11" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="20" unique_id=1635407032 instance=ExtResource("6_2uk4d")]
+position = Vector2(885.00006, 247.00003)
+scale = Vector2(5.3576465, 6.176153)
+skew = 0.1897924
+speed = 20.0
+
+[node name="Enemy14" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="21" unique_id=1443569997 instance=ExtResource("6_2uk4d")]
+position = Vector2(524.00006, 186)
+scale = Vector2(7.340198, 8.398089)
+skew = 0.34714556
+speed = 20.0
 
 [node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="1" unique_id=1103718868]
 text = "Level 2"
+
+[node name="MusicPlayer" parent="." index="7" unique_id=724032201]
+stream = ExtResource("7_x41uu")

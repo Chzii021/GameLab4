@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://c15tw24t3axhb"]
 
+[ext_resource type="Texture2D" uid="uid://8pu7v02btl1b" path="res://images mine.jpg" id="1_cfvhd"]
 [ext_resource type="PackedScene" uid="uid://puc4l62gx6et" path="res://Scenes/Prefabs/button_exit.tscn" id="2_buq0o"]
 [ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://Scenes/Prefabs/theme.tres" id="2_chlux"]
+[ext_resource type="AudioStream" uid="uid://bp5fyp8s3ijpn" path="res://ป่า/background 4/LevelXP Sounds (Minecraft) - Sound Effects for editing.mp3" id="3_5lehs"]
 
 [node name="GameOver" type="Node2D" unique_id=826370530]
+
+[node name="ImagesMine" type="Sprite2D" parent="." unique_id=1659695579]
+position = Vector2(571.24994, 319.74997)
+scale = Vector2(1.8210936, 2.1041665)
+texture = ExtResource("1_cfvhd")
 
 [node name="Title" type="Label" parent="." unique_id=1965507633]
 offset_left = 419.0
@@ -20,16 +27,20 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="btnExit" parent="." unique_id=1633606001 instance=ExtResource("2_buq0o")]
-offset_left = 438.0
-offset_top = 359.0
-offset_right = 564.0
-offset_bottom = 413.0
+offset_left = 338.0
+offset_top = 327.0
+offset_right = 464.0
+offset_bottom = 381.0
 text = "Exit to Menu"
 
 [node name="btnPlay" parent="." unique_id=1146872882 instance=ExtResource("2_buq0o")]
-offset_left = 597.0
-offset_top = 359.0
-offset_right = 723.0
-offset_bottom = 413.0
+offset_left = 678.0
+offset_top = 327.0
+offset_right = 804.0
+offset_bottom = 381.0
 shortcut = null
 text = "Play Again"
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=877906163]
+stream = ExtResource("3_5lehs")
+autoplay = true

@@ -2,66 +2,33 @@
 
 [ext_resource type="PackedScene" uid="uid://d27bcsmx82vfa" path="res://Scenes/Actors/enemy.tscn" id="1_b7voo"]
 [ext_resource type="Script" uid="uid://bx5lotsye1r4s" path="res://Scenes/Actors/monster_small.gd" id="2_a8voy"]
-[ext_resource type="Texture2D" uid="uid://dv87lp4aq8wj3" path="res://Assets/Spritesheet/Slime1_Walk_without_shadow.png" id="4_l5hy0"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ynp2i"]
-atlas = ExtResource("4_l5hy0")
-region = Rect2(0, 127, 64, 42)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wil0m"]
-atlas = ExtResource("4_l5hy0")
-region = Rect2(64, 127, 64, 42)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_225wo"]
-atlas = ExtResource("4_l5hy0")
-region = Rect2(128, 127, 64, 42)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q0esp"]
-atlas = ExtResource("4_l5hy0")
-region = Rect2(192, 127, 64, 42)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3umna"]
-atlas = ExtResource("4_l5hy0")
-region = Rect2(256, 127, 64, 42)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3fnnt"]
-atlas = ExtResource("4_l5hy0")
-region = Rect2(320, 127, 64, 42)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_40jp4"]
-atlas = ExtResource("4_l5hy0")
-region = Rect2(384, 127, 64, 42)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8m1sm"]
-atlas = ExtResource("4_l5hy0")
-region = Rect2(448, 127, 64, 42)
+[ext_resource type="Texture2D" uid="uid://caolg1wdey3lg" path="res://Fallen_Angels_2/freedinosprite/files (1)/Walk_1_purple.png" id="3_gm5xx"]
+[ext_resource type="Texture2D" uid="uid://bbt1if8g6jgwh" path="res://Fallen_Angels_2/freedinosprite/files (1)/Walk_2_purple.png" id="4_a7xs7"]
+[ext_resource type="Texture2D" uid="uid://cqp3scjik2al8" path="res://Fallen_Angels_2/freedinosprite/files (1)/Walk_3_purple.png" id="5_iqf3u"]
+[ext_resource type="Texture2D" uid="uid://bfm4vamcqft4g" path="res://Fallen_Angels_2/freedinosprite/files (1)/Walk_4_purple.png" id="6_pq4hd"]
+[ext_resource type="Texture2D" uid="uid://dcmtr7sxnvrvg" path="res://Fallen_Angels_2/freedinosprite/files (1)/Walk_5_purple.png" id="7_8glpq"]
+[ext_resource type="Texture2D" uid="uid://bljpv3i1ohyg7" path="res://Fallen_Angels_2/freedinosprite/files (1)/Walk_6_purple.png" id="8_caomq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l7ctk"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ynp2i")
+"texture": ExtResource("8_caomq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wil0m")
+"texture": ExtResource("3_gm5xx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_225wo")
+"texture": ExtResource("4_a7xs7")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q0esp")
+"texture": ExtResource("5_iqf3u")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3umna")
+"texture": ExtResource("6_pq4hd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3fnnt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_40jp4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8m1sm")
+"texture": ExtResource("7_8glpq")
 }],
 "loop": 1,
 "name": &"slim",
@@ -83,10 +50,11 @@ scale = Vector2(1, 0.8)
 position = Vector2(0, -1)
 
 [node name="AnimateSprite" type="AnimatedSprite2D" parent="Sprite" index="0" unique_id=87960724]
-position = Vector2(0, -37)
-scale = Vector2(2, 2)
+position = Vector2(-12, -16)
+scale = Vector2(0.09007353, 0.081567794)
 sprite_frames = SubResource("SpriteFrames_l7ctk")
 animation = &"slim"
+flip_h = true
 
 [node name="Ray" parent="Sprite" index="1" unique_id=1415425330]
 visible = false

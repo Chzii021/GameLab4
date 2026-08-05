@@ -1,17 +1,24 @@
 [gd_scene format=3 uid="uid://b46lxwc5r3dy4"]
 
 [ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://Scenes/Prefabs/theme.tres" id="1_5l1gm"]
+[ext_resource type="Texture2D" uid="uid://cowcedrx12d24" path="res://Screenshot 2026-08-05 154228.png" id="1_81byk"]
 [ext_resource type="PackedScene" uid="uid://puc4l62gx6et" path="res://Scenes/Prefabs/button_exit.tscn" id="2_81byk"]
+[ext_resource type="AudioStream" uid="uid://bp5fyp8s3ijpn" path="res://ป่า/background 4/LevelXP Sounds (Minecraft) - Sound Effects for editing.mp3" id="4_81byk"]
 
 [node name="GameOver" type="Node2D" unique_id=826370530]
 
+[node name="Screenshot20260805154228" type="Sprite2D" parent="." unique_id=196533721]
+position = Vector2(575, 322.25003)
+scale = Vector2(0.66282415, 1.0086071)
+texture = ExtResource("1_81byk")
+
 [node name="Title" type="Label" parent="." unique_id=1965507633]
-offset_left = 438.0
-offset_top = 225.0
-offset_right = 742.0
-offset_bottom = 269.0
+offset_left = 388.0
+offset_top = 254.0
+offset_right = 744.0
+offset_bottom = 331.0
 theme = ExtResource("1_5l1gm")
-theme_override_colors/font_color = Color(0.36862746, 0.9137255, 0.1882353, 1)
+theme_override_colors/font_color = Color(0.36862746, 0.06666667, 0.1882353, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 33
@@ -33,3 +40,7 @@ offset_right = 723.0
 offset_bottom = 413.0
 shortcut = null
 text = "Play Again"
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=7438222]
+stream = ExtResource("4_81byk")
+autoplay = true

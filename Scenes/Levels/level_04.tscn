@@ -1,0 +1,108 @@
+[gd_scene format=4 uid="uid://towe6jtciome"]
+
+[ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1_3juvj"]
+[ext_resource type="PackedScene" uid="uid://b46lxwc5r3dy4" path="res://Scenes/Levels/game_win.tscn" id="2_oabfo"]
+[ext_resource type="PackedScene" uid="uid://bp4l1nlnh8oq1" path="res://Scenes/Prefabs/trap_2.tscn" id="3_duqtl"]
+[ext_resource type="Texture2D" uid="uid://boohycgv2x8t8" path="res://ป่า/background 1/background 1.png" id="3_oabfo"]
+[ext_resource type="TileSet" uid="uid://bvk6vx5i1riqd" path="res://Scenes/Prefabs/ground_tile_set.tres" id="4_ecyoo"]
+[ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://Scenes/Prefabs/coin.tscn" id="5_5ot8f"]
+[ext_resource type="PackedScene" uid="uid://dabag2r57aued" path="res://Scenes/Prefabs/heal_potion.tscn" id="6_c71j3"]
+[ext_resource type="PackedScene" uid="uid://ek7hxkqp2wff" path="res://Scenes/Actors/monster_slim.tscn" id="7_s6vch"]
+[ext_resource type="AudioStream" uid="uid://rwgeggxpokjv" path="res://Jurassic Park theme song.mp3" id="9_duqtl"]
+
+[node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_3juvj")]
+
+[node name="LevelFinishDoor" parent="." index="0" unique_id=1788542095]
+position = Vector2(1369, 408)
+next_scene = ExtResource("2_oabfo")
+
+[node name="Background3" type="Sprite2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="0" unique_id=103976273]
+position = Vector2(532, 165.5)
+scale = Vector2(3.5659723, 3.0154321)
+texture = ExtResource("3_oabfo")
+
+[node name="Trap6" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="1" unique_id=1894763376 instance=ExtResource("3_duqtl")]
+position = Vector2(771, 223)
+rotation = -1.5707964
+scale = Vector2(-1.8231859, 1.2526364)
+
+[node name="Ground" type="TileMapLayer" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="4" unique_id=1064214822]
+use_parent_material = true
+tile_map_data = PackedByteArray("AAADAAcAAAAAAAEAAAAEAAcAAAAAAAEAAAAFAAcAAAAAAAEAAAATAAcAAAAGAAAAAAAUAAcAAAAGAAAAAAAVAAcAAAAGAAAAAAAWAAcAAAAGAAAAAAAXAAcAAAAGAAAAAAD+/wUAAAADAAEAAAD+/wYAAAADAAEAAAD+/wQAAAADAAEAAAD+/wMAAAADAAEAAAD+/wIAAAADAAEAAAD+/wEAAAADAAEAAAD+/wcAAAADAAEAAAD+/wgAAAADAAEAAAD+/wkAAAADAAEAAAD//wkAAAADAAEAAAD//wgAAAADAAEAAAAGAAgAAAADAAEAAAAGAAkAAAADAAEAAAAHAAkAAAADAAEAAAAHAAgAAAADAAEAAAAGAAoAAAADAAEAAAAGAAsAAAADAAEAAAAGAAwAAAADAAEAAAAGAA0AAAADAAEAAAAHAA0AAAADAAEAAAAHAAwAAAADAAEAAAAHAAsAAAADAAEAAAAHAAoAAAADAAEAAAD+/woAAAADAAEAAAD+/wsAAAADAAEAAAD+/wwAAAADAAEAAAD+/w0AAAADAAEAAAD//w0AAAADAAEAAAD//wwAAAADAAEAAAD//wsAAAADAAEAAAD//woAAAADAAEAAAASAAgAAAADAAEAAAASAAkAAAADAAEAAAASAAoAAAADAAEAAAASAAsAAAADAAEAAAASAAwAAAADAAEAAAASAA0AAAADAAEAAAARAA0AAAADAAEAAAARAAwAAAADAAEAAAARAAsAAAADAAEAAAARAAoAAAADAAEAAAARAAkAAAADAAEAAAARAAgAAAADAAEAAAAVAAgAAAAGAAAAAAAUAAgAAAAGAAAAAAAWAAgAAAAGAAAAAAAWAAYAAAAGAAAAAAAWAAUAAAAGAAAAAAAWAAQAAAAGAAAAAAAWAAMAAAAGAAAAAAAXAAMAAAAGAAAAAAAXAAQAAAAGAAAAAAAXAAUAAAAGAAAAAAAXAAYAAAAGAAAAAAAXAAgAAAAGAAAAAAATAAkAAAAGAAAAAAAUAAkAAAAGAAAAAAATAAgAAAAGAAAAAAAVAAkAAAAGAAAAAAAWAAkAAAAGAAAAAAAXAAkAAAAGAAAAAAAXAAIAAAAGAAAAAAAWAAIAAAAGAAAAAAAWAAEAAAAGAAAAAAAXAAEAAAAGAAAAAAACAAcAAAAAAAEAAAABAAcAAAAAAAEAAAAAAAcAAAAAAAEAAAD//wcAAAAAAAEAAAD//wYAAAAAAAQAAAAAAAYAAAAAAAQAAAABAAYAAAAAAAQAAAACAAYAAAAAAAQAAAADAAYAAAAAAAQAAAAEAAYAAAAAAAQAAAAFAAYAAAAAAAQAAAAIAAUAAAAAAAMAAAAJAAUAAAAAAAMAAAAOAAMAAAAAAAMAAAAPAAMAAAAAAAMAAAAQAAgAAAADAAEAAAA=")
+tile_set = ExtResource("4_ecyoo")
+
+[node name="Trap5" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="5" unique_id=765514004 instance=ExtResource("3_duqtl")]
+position = Vector2(468.00006, 408)
+rotation = -3.1415927
+scale = Vector2(-1.3565843, 1.0751042)
+
+[node name="Trap7" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="6" unique_id=107666426 instance=ExtResource("3_duqtl")]
+position = Vector2(1111, 327.00006)
+rotation = 2.3561945
+scale = Vector2(3.3240068, 1.569098)
+
+[node name="Coin7" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="7" unique_id=629814736 instance=ExtResource("5_5ot8f")]
+position = Vector2(1230, 399.99994)
+rotation = 3.1415927
+
+[node name="Coin6" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="8" unique_id=583137286 instance=ExtResource("5_5ot8f")]
+position = Vector2(953, 157.00003)
+rotation = -2.6179938
+
+[node name="Coin8" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="9" unique_id=1404586329 instance=ExtResource("5_5ot8f")]
+position = Vector2(761, 129)
+rotation = -2.0943952
+
+[node name="Coin5" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="10" unique_id=677002635 instance=ExtResource("5_5ot8f")]
+position = Vector2(627, 267)
+rotation = -1.5707964
+
+[node name="Coin4" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="11" unique_id=1256934038 instance=ExtResource("5_5ot8f")]
+position = Vector2(504, 177.00003)
+rotation = -1.0471976
+
+[node name="Coin3" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="12" unique_id=1856055174 instance=ExtResource("5_5ot8f")]
+position = Vector2(467.99997, 178)
+rotation = -0.5235988
+
+[node name="Coin2" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="13" unique_id=1031892760 instance=ExtResource("5_5ot8f")]
+position = Vector2(339.99997, 312.00003)
+
+[node name="Coin" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="14" unique_id=251510796 instance=ExtResource("5_5ot8f")]
+position = Vector2(340.00003, 352)
+rotation = 0.5235988
+
+[node name="HealPotion2" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="15" unique_id=1243373561 instance=ExtResource("6_c71j3")]
+position = Vector2(733, 105)
+rotation = -1.3887382
+scale = Vector2(1.790656, -1.2987123)
+skew = 0.18979251
+
+[node name="Enemy5" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="16" unique_id=600502477 instance=ExtResource("7_s6vch")]
+visible = false
+position = Vector2(549, 253)
+rotation = -3.403392
+scale = Vector2(2.8109994, -2.0387385)
+skew = 0.18979251
+speed = 20.0
+
+[node name="HealPotion" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="17" unique_id=242563240 instance=ExtResource("6_c71j3")]
+position = Vector2(1152, 456.00006)
+rotation = -1.5707965
+scale = Vector2(1.8231857, -1.2526363)
+
+[node name="Enemy6" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="18" unique_id=1023830147 instance=ExtResource("7_s6vch")]
+position = Vector2(186, 456)
+scale = Vector2(3.9398503, 2.9901297)
+speed = 20.0
+
+[node name="Enemy7" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="19" unique_id=203247684 instance=ExtResource("7_s6vch")]
+position = Vector2(1255, 453)
+scale = Vector2(-4.0051994, 4.5973396)
+speed = 20.0
+
+[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="1" unique_id=1103718868]
+text = "Level 4"
+
+[node name="MusicPlayer" parent="." index="7" unique_id=724032201]
+stream = ExtResource("9_duqtl")
