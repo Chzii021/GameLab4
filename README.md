@@ -15,6 +15,12 @@ This starter kit provides all the essential mechanics needed to build a complete
 - [Game Preview](https://computingkku.github.io/2D-Platformer-Starter-Kit/)
 
 
+## เล่นเกมได้เลยคับ https://chzii021.github.io/GameLab4/
+## ตัวอย่างคลิปDEMO https://drive.google.com/file/d/1kYPSLV-K-ov16ANrciV-N9EZc7efSMA5/view?usp=sharing
+
+<img src="docs/demo1.jpg" width="300">
+<img src="docs/demo2.jpg" width="300">
+
 ## Features
 
 - **Game Menu** — A simple main menu scene (`Menu.tscn`) with Start and Exit options, so players can launch into the game or quit cleanly.
